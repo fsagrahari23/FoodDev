@@ -1,50 +1,128 @@
-# Welcome to your Expo app 👋
+\*\*
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+---
 
-## Get started
+## Table of Contents
 
-1. Install dependencies
+* [Overview](#overview)
+* [Features](#features)
+* [Getting Started](#getting-started)
 
-   ```bash
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Testing](#testing)
+* [Project Structure](#project-structure)
+* [Contributing](#contributing)
+* [License](#license)
+* [Contact](#contact)
+
+---
+
+## Overview
+
+**FoodDev** is an all-in-one developer toolkit tailored for building cross-platform food ordering applications with React Native and Expo. It provides a solid foundation with core configurations, styling, and error monitoring, enabling developers to focus on delivering a seamless user experience.
+
+### Why FoodDev?
+
+This project streamlines mobile app development by integrating essential tools and best practices. The core features include:
+
+* 🧩 **NativeWind & Tailwind CSS Integration:** Effortlessly style your app with utility-first CSS and native styling presets.
+* 🚀 **Robust Configuration & Build Setup:** Simplifies project initialization, bundling, and platform-specific adjustments.
+* 🛡️ **Error Tracking with Sentry:** Ensures stability with integrated error monitoring during development and production.
+* 🔑 **User Authentication via Appwrite:** Seamlessly manage user sign-in, profiles, and sessions.
+* ⚙️ **Modular Architecture:** Supports scalable, maintainable code with organized routing, components, and assets.
+
+---
+
+## Getting Started
+
+Follow these steps to get a local copy up and running.
+
+### Prerequisites
+
+Ensure you have the following installed:
+
+* **Node.js** (v14 or later)
+* **npm** (v6 or later)
+* **Expo CLI**: `npm install -g expo-cli`
+
+### Installation
+
+1. **Clone the repository:**
+
+   ```sh
+   git clone https://github.com/fsagrahari23/FoodDev.git
+   ```
+2. **Navigate to the project directory:**
+
+   ```sh
+   cd FoodDev
+   ```
+3. **Install dependencies:**
+
+   ```sh
    npm install
    ```
 
-2. Start the app
+### Usage
 
-   ```bash
-   npx expo start
-   ```
+Start the development server:
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```sh
+npm start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+This will launch the Expo Dev Tools in your browser. You can run the app on an emulator, simulator, or real device using the Expo Go app.
 
-## Learn more
+### Testing
 
-To learn more about developing your project with Expo, look at the following resources:
+FoodDev uses the **Jest** test framework. To run the test suite:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```sh
+npm test
+```
 
-## Join the community
+---
 
-Join our community of developers creating universal apps.
+## Project Structure
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```
+FoodDev/
+├── assets/           # Images, fonts, and other static assets
+├── src/
+│   ├── components/  # Reusable UI components
+│   ├── navigation/  # React Navigation routes and config
+│   ├── screens/     # App screens
+│   ├── services/    # API and Appwrite integration
+│   ├── styles/      # Tailwind CSS configuration files
+│   └── App.tsx      # Entry point
+├── .eslintrc.js      # ESLint configuration
+├── app.json          # Expo configuration
+└── package.json      # Project metadata and scripts
+```
+
+---
+
+## Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+---
+
+## Contact
+
+Monu Agrahari - [GitHub Profile](https://github.com/fsagrahari23)
+Project Link: [https://github.com/fsagrahari23/FoodDev](https://github.com/fsagrahari23/FoodDev)
