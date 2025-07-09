@@ -8,7 +8,7 @@ import useAuthStore from "@/store/auth.store";
 
 export default function Layout (){
     const {isAuthenticated} =useAuthStore() // Replace this later with actual auth logic
-    if (isAuthenticated) return <Redirect href="/(tabs)" />;
+    if (isAuthenticated) return <Redirect href="/(tabs)/home" />;
     return (
        <KeyboardAvoidingView behavior={Platform.OS==='ios'?'padding':'height'}>
             <ScrollView className="bg-white h-full" keyboardShouldPersistTaps='handled'>

@@ -47,7 +47,7 @@ export default function TabsLayout() {
                 }
             }}
         >
-            <Tabs.Screen name="index" options={{
+            <Tabs.Screen name="home" options={{
                 title: "Home",
                 tabBarIcon:({focused})=><TabBarIcon icon={images.home} title={'Home'} focused={focused}/>}} />
             <Tabs.Screen name="cart" options={{

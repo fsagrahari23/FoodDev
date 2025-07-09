@@ -7,7 +7,7 @@ import cn from 'clsx'
 import CartButton from "@/components/CartButton";
 import * as Sentry from "@sentry/react-native";
 import useAuthStore from "@/store/auth.store";
-export default function Index(){
+export default function Home(){
     const {user}= useAuthStore();
     return (
         <SafeAreaView className="flex-1">

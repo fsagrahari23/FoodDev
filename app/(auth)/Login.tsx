@@ -10,6 +10,7 @@ const Login = () => {
 
     const [form, setForm] = useState({email:'',password:''})
     const [isSubmitting, setSubmitting] = useState(false);
+    const {fetchAuthUser} = useAuthStore()
     const submit = async (event:Event) => {
         event.preventDefault();
         if(!form.email || !form.password) {
@@ -19,8 +20,9 @@ const Login = () => {
         try{
         // call appwrite sign in fun
             await signIn({email:form.email, password:form.password})
+            await fetchAuthUser();
             Alert.alert('Success','User signed in successfully');
-            router.replace("/(tabs)");
+           router.push("/(tabs)/home");
         }catch (error) {
             Alert.alert('Error',error.message);
             Sentry.captureEvent(error);

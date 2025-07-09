@@ -4,24 +4,26 @@ import CustomButton from "@/components/CustomButton";
 import CustomInput from "@/components/CustomInput";
 import { useState } from "react";
 import {createUser} from "@/lib/appwrite";
+import useAuthStore from "@/store/auth.store";
 
 const SignUp = () => {
-    const isAuthenticated = false; // Replace this later with actual auth logic
-
+  const {isAuthenticated} = useAuthStore();
     const [form, setForm] = useState({name:'',email:'',password:''})
     const [isSubmitting, setSubmitting] = useState(false);
-    const submit = async (event:Event) => {
+    const {fetchAuthUser} = useAuthStore();
+     const submit = async (event:Event) => {
         event.preventDefault();
         if(!form.name||!form.email || !form.password) {
             return  Alert.alert("Please enter valid username , email address and password");
         }
+
         setSubmitting(true);
         try{
             // call appwrite sign up
             await createUser({name:form.name, email:form.email, password:form.password})
-
+             await fetchAuthUser();
             Alert.alert('Success','User registered successfully');
-            router.replace("/(tabs)");
+            router.replace("/(tabs)/home");
             setSubmitting(false);
             setForm({name:'',email:'',password:''})
 
